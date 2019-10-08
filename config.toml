@@ -2,7 +2,7 @@ baseURL = "https://absurdtechpodcast.com/"
 languageCode = "en-us"
 title = "Absurd Tech Podcast"
 theme = "absurd"
-paginate = 2
+paginate = 12
 
 [params]
     description = "Podcast."

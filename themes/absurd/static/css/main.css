@@ -379,3 +379,30 @@ nav {
 .plyr__tooltip {
     font-family: monospace;
 }
+
+/* pagination */
+.pagination {
+    width: 992px;
+    margin-top: 128px;
+    margin-bottom: 16px;
+}
+
+.pagination-body {
+    margin-left: 288px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+.pagination-body-current {
+    text-align: center;
+}
+
+.pagination-body-next {
+    text-align: right;
+}
+
+.pagination-body a {
+    color: #000;
+    text-decoration: none;
+}

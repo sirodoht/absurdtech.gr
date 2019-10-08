@@ -34,6 +34,7 @@
     {{ end }}
 </main>
 
+{{ if gt .Paginator.TotalPages 1 }}
 <div class="pagination">
     <div class="pagination-body">
         <div class="paginator-body-prev">
@@ -42,7 +43,7 @@
             {{ end }}
         </div>
 
-        <div class="pagination-body-current">{{ .Paginator.PageNumber }}</div>
+        <div class="pagination-body-current">{{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }}</div>
 
         <div class="pagination-body-next">
             {{ if .Paginator.HasNext }}
@@ -51,6 +52,7 @@
         </div>
     </div>
 </div>
+{{ end }}
 {{ end }}
 
 {{ define "scripts" }}
