@@ -1,0 +1,65 @@
+{{ define "extra-head" }}
+<title>{{ .Site.Title }}</title>
+<meta name="description" content="{{ .Site.Params.Description }}">
+<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}">
+<link href="{{ .Site.BaseURL }}/css/plyr.css" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+<header>
+    <div class="header-logo">
+        <a href="{{ .Site.BaseURL }}">
+            <h1>{{ .Site.Title }}</h1>
+            <div class="header-logo-underline"></div>
+        </a>
+    </div>
+</header>
+
+<main class="posts">
+    {{ range (.Paginate .Pages).Pages }}
+        <div class="posts-item">
+            <div class="posts-item-divider"></div>
+            <a href="{{ .Permalink }}">
+                <h2>{{ .Title }}</h2>
+            </a>
+            <p class="posts-item-summary">
+                <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>. {{ .Summary | plainify}}
+            </p>
+            <div class="posts-item-audio">
+                <audio controls>
+                    <source src="/audio.mp3" type="audio/mp3">
+                </audio>
+            </div>
+        </div>
+    {{ end }}
+</main>
+
+<div class="pagination">
+    <div class="pagination-body">
+        <div class="paginator-body-prev">
+            {{ if .Paginator.HasPrev }}
+                <a href="{{ .Paginator.Prev.URL }}">← Newer</a>
+            {{ end }}
+        </div>
+
+        <div class="pagination-body-current">{{ .Paginator.PageNumber }}</div>
+
+        <div class="pagination-body-next">
+            {{ if .Paginator.HasNext }}
+                <a href="{{ .Paginator.Next.URL }}">Older →</a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ define "scripts" }}
+<script src="/js/plyr.js"></script>
+<script>
+    Array.from(document.querySelectorAll('.posts-item-audio audio')).map(p => new Plyr(p, {
+        iconUrl: "/img/plyr.svg",
+        controls: ['play', 'progress', 'current-time', 'settings'],
+        disableContextMenu: false,
+    }));
+</script>
+{{ end }}
