@@ -361,15 +361,18 @@ nav {
 .plyr__controls__item.plyr__control {
     border-radius: 50%;
     border: 9px solid #000;
-    padding-left: 31px;
-    padding-right: 19px;
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 25px;
+}
+
+.plyr__control .icon--pressed {
+    width: 47px;
+    height: 47px;
 }
 
 .plyr__control .icon--not-pressed {
     width: 47px;
     height: 47px;
+    transform: translateX(7px);
 }
 
 .plyr__time--current {
