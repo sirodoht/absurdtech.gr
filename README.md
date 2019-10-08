@@ -1,2 +1,7 @@
 # absurdtechpodcast.com
-Static website for the Absurd Tech Podcast
+
+Hugo website for the Absurd Tech Podcast
+
+## License
+
+MIT
