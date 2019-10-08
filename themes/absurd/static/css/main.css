@@ -406,3 +406,8 @@ nav {
     color: #000;
     text-decoration: none;
 }
+
+/* footer */
+footer {
+    margin-top: 128px;
+}
