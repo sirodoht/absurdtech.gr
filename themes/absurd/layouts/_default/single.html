@@ -1,0 +1,47 @@
+{{ define "extra-head" }}
+<title>{{ .Title }}</title>
+<meta name="description" content="{{ .Summary | plainify }}">
+<link href="{{ .Site.BaseURL }}/css/plyr.css" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+<nav>
+    <a href="{{ .Site.BaseURL }}" class="nav-logo">
+        <div class="nav-logo-text">{{ .Site.Title }}</div>
+    </a>
+</nav>
+
+<main class="single">
+    <div class="single-divider"></div>
+    <h1>{{ .Title }}</h1>
+    <div class="single-content">
+        <p class="single-content-summary">
+            <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>. {{ .Summary | plainify }}
+        </p>
+
+        <div class="single-content-audio">
+            <audio id="player" controls>
+                <source src="/audio.mp3" type="audio/mp3">
+            </audio>
+        </div>
+        <div class="single-content-links">
+            <a href="itunes.com" target="_blank" class="single-content-links-item">On iTunes</a>
+            <a href="spotify.com" target="_blank" class="single-content-links-item">On Spotify</a>
+            <a href="download" target="_blank" class="single-content-links-item">Download</a>
+        </div>
+
+        {{ replace .Content .Summary "" | safeHTML }}
+    </div>
+</main>
+{{ end}}
+
+{{ define "scripts" }}
+<script src="/js/plyr.js"></script>
+<script>
+    new Plyr('#player', {
+        iconUrl: "/img/plyr.svg",
+        controls: ['play', 'progress', 'current-time', 'settings'],
+        disableContextMenu: false,
+    });
+</script>
+{{ end }}
