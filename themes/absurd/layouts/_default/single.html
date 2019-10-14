@@ -21,13 +21,13 @@
 
         <div class="single-content-audio">
             <audio id="player" controls>
-                <source src="/audio.mp3" type="audio/mp3">
+                <source src="{{ .Params.link }}" type="audio/mp3">
             </audio>
         </div>
         <div class="single-content-links">
             <a href="itunes.com" target="_blank" class="single-content-links-item">On iTunes</a>
             <a href="spotify.com" target="_blank" class="single-content-links-item">On Spotify</a>
-            <a href="download" target="_blank" class="single-content-links-item">Download</a>
+            <a href="{{ .Params.link }}" target="_blank" class="single-content-links-item">Download</a>
         </div>
 
         {{ replace .Content .Summary "" | safeHTML }}
