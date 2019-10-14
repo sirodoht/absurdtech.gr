@@ -1,4 +1,4 @@
-# absurdtechpodcast.com
+# absurdtech.gr
 
 Hugo website for the Absurd Tech Podcast
 
