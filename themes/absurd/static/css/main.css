@@ -584,3 +584,71 @@ nav {
 footer {
     margin-top: 128px;
 }
+
+/* isso comments */
+.single-comments {
+    margin-top: 64px;
+    margin-bottom: 64px;
+    font-size: 18px;
+}
+
+#isso-thread > h4 {
+    display: none;
+}
+
+#isso-thread .isso-postbox > .form-wrapper .textarea,
+#isso-thread .isso-postbox > .form-wrapper .preview {
+    margin: 0 0 4px;
+    padding: 6px 8px;
+    border-radius: 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    min-height: 100px;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper input {
+    padding: 3px 7px;
+    max-width: 100%;
+    border-radius: 0;
+    background-color: #fff;
+    line-height: 1.4em;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
+    margin-right: 4px;
+}
+  @media screen and (max-width: 600px) {
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .input-wrapper {
+      margin-right: 0;
+    }
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input {
+    padding: 2px 16px;
+    border-radius: 0;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.4em;
+    box-shadow: none;
+    -webkit-appearance: none;
+}
+
+#isso-thread .isso-postbox > .form-wrapper > .auth-section .post-action > input[name="preview"] {
+    display: none;
+}
+
+#isso-thread .isso-feedlink,
+#isso-thread .isso-comment > div.text-wrapper > .isso-comment-footer a {
+    font-family: monospace;
+    font-weight: 400;
+}
+
+#isso-thread .isso-comment > div.text-wrapper > .isso-comment-header .spacer,
+#isso-thread .isso-comment > div.text-wrapper > .isso-comment-header a.permalink,
+#isso-thread .isso-comment > div.text-wrapper > .isso-comment-header .note,
+#isso-thread .isso-comment > div.text-wrapper > .isso-comment-header a.parent {
+    font-family: monospace;
+}

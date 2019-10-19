@@ -32,6 +32,10 @@
 
         {{ replace .Content .Summary "" | safeHTML }}
     </div>
+    <div class="single-comments">
+        <h2>Comments</h2>
+        <div id="isso-thread"></div>
+    </div>
 </main>
 {{ end}}
 
@@ -44,4 +48,10 @@
         disableContextMenu: false,
     });
 </script>
+
+<script
+    data-isso="https://comments.absurdtech.gr/"
+    data-isso-avatar="false"
+    data-isso-vote="false"
+    src="https://comments.absurdtech.gr/js/embed.min.js"></script>
 {{ end }}
