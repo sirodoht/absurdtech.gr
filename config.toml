@@ -1,4 +1,4 @@
-baseURL = "http://absurdtech.gr/"
+baseURL = "https://absurdtech.gr/"
 languageCode = "en-us"
 title = "Absurd Tech Podcast"
 theme = "absurd"
