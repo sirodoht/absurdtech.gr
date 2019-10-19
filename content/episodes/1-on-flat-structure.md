@@ -4,7 +4,7 @@ date: 2019-10-18T21:41:40+03:00
 link: https://static.absurdtech.gr/episodes/absurdtech_01.mp3
 ---
 
-Αυτό είναι το πρώτο επεισόδιο του podcast. Συζητάμε για flat company strucure και managers.
+Αυτό είναι το πρώτο επεισόδιο του podcast. Συζητάμε για flat company structure και managers.
 
 <!--more-->
 
