@@ -209,6 +209,15 @@ body {
     }
 }
 
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 /* home */
 header {
     width: 992px;
@@ -328,12 +337,12 @@ header {
     }
 }
 
-.posts-item a {
+.posts-item > a {
     color: #000;
     text-decoration: line-through;
 }
 
-.posts-item a:hover {
+.posts-item > a:hover {
     text-decoration: none;
 }
 
@@ -352,6 +361,10 @@ header {
     .posts-item-audio {
         width: 100%;
     }
+}
+
+.posts-item-link {
+    margin-top: 24px;
 }
 
 /* single */
