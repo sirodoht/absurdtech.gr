@@ -1,6 +1,6 @@
 ---
 title: "1 - On flat structure"
-date: 2018-11-01T21:41:40+03:00
+date: 2019-10-19T21:41:40+03:00
 link: https://static.absurdtech.gr/episodes/absurdtech_01.mp3
 ---
 
